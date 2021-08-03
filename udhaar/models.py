@@ -2,6 +2,7 @@ from django.db import models
 
 class Party(models.Model):
     name=models.CharField(max_length=30)
+    Balance=models.PositiveBigIntegerField(null=True,blank=True)
     
 
     def __str__(self):
@@ -12,7 +13,6 @@ class Transactions(models.Model):
     date=models.DateField()
     amount=models.SmallIntegerField(null=True,blank=True)
     description=models.CharField(max_length=30)
-    total=models.IntegerField(null=True,blank=True)
 
 
 
